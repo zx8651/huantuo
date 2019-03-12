@@ -3,6 +3,7 @@
 |   |-- build.js                     // 生产环境构建代码
 |   |-- check-version.js             // 检查node、npm等版本
 |   |-- utils.js                     // 构建工具相关
+|   |-- validate.js                  // 验证方法
 |   |-- vue-loader.conf.js           // webpack loader配置
 |   |-- webpack.base.conf.js         // webpack基础配置
 |   |-- webpack.dev.conf.js          // webpack开发环境配置,构建开发本地服务器

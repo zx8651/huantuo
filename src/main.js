@@ -5,6 +5,7 @@ import App from './App'
 import router from './router'
 import animate from 'animate.css'
 import axios from 'axios'
+import Validate from '../build/validate';
 
 // import Vant from 'vant'
 import 'vant/lib/index.css'

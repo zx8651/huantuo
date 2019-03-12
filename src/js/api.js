@@ -1,6 +1,5 @@
 import qs from 'qs'
 import axios from 'axios'
-import { Message } from 'iview'
 import uitls from './util'
 
 let baseUrl = 'http://192.168.0.1:8888/' /*设置你的baseUrl */
