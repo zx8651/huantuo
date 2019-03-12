@@ -4,8 +4,7 @@
   </div>
 </template>
 
-<script>
-  import { Loading } from 'vant'
+<script>import { Loading } from 'vant'
 export default {
   components: {
     [Loading.name]: Loading
