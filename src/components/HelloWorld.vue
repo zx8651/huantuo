@@ -48,6 +48,19 @@
       this.$http.get('/ip', res => {
         console.log(res)
       })
+      this.request('BannerDestory', {
+        id: this.removeItem.id
+      }).then(res => {
+        if (res.success) {
+          this.removeItem.show = false;
+          this.$Message.success('删除成功')
+          this.getBannerList();
+        }
+      }).catch(e => {
+        console.log(e);
+      })
+
+
     }
   }
 }
