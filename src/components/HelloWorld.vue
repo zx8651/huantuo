@@ -52,9 +52,7 @@
         id: this.removeItem.id
       }).then(res => {
         if (res.success) {
-          this.removeItem.show = false;
-          this.$Message.success('删除成功')
-          this.getBannerList();
+         // 成功
         }
       }).catch(e => {
         console.log(e);

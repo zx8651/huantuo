@@ -70,6 +70,16 @@ const formatReq = function (method, url, data, json) {
       data
     })
       .then(r => {
+
+        if (res.data.code === '6666') {
+          // 登陆后做出一些本地的处理，按需加载,()
+          // ...................
+          utils.local.set('expireTime', expireTime) // 过期时间
+          utils.local.set('token', token)
+        }
+
+
+
         // store.commit('UPDATE_LOADING', false); //隐藏loading
         // 这里可以添加指定对应状态码的处理方式,比如登陆过期,res.data.code === '6666' 路由跳转到login
         resolve(r)
