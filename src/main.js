@@ -6,7 +6,8 @@ import router from './router'
 import animate from 'animate.css'
 import axios from 'axios'
 import Validate from '../build/validate';
-
+import Http from './helper/api/axios.js';
+Vue.prototype.Http = Http;
 // import Vant from 'vant'
 import 'vant/lib/index.css'
 
