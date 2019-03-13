@@ -5,11 +5,11 @@ import App from './App'
 import router from './router'
 import animate from 'animate.css'
 import axios from 'axios'
-import Validate from '../build/validate';
-import Http from './helper/api/axios.js';
-Vue.prototype.Http = Http;
-// import Vant from 'vant'
+// import Validate from '../build/validate'
+import Http from './js/api.js'
 import 'vant/lib/index.css'
+Vue.prototype.$http = Http
+// import Vant from 'vant'
 
 Vue.use(axios)
 Vue.config.productionTip = false

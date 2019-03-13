@@ -16,36 +16,38 @@
 
   </div>
 </template>
-
-<script src="//static-1.talk-fun.com/open/cooperation/demos/live-pc/js/libs/libs.min.js"></script>
-
-<!--@ SDK-PC包文件 -->
-<script src="//static-1.talk-fun.com/open/maituo_v2/dist/live/pc/sdk-pc.3.1.min.js"></script>
-<!--@ SDK-H5包文件 -->
-<script src="//static-1.talk-fun.com/open/maituo_v2/dist/live/mobile/h5/sdk-mobile.2.9.min.js"></script>
 <script>
-   //请求获取token
-   var access_token = "${access_token}";
-  // 创建SDK对象
-  // var _HT = new MT.SDK.main(access_token);
-  // 监听 "connect" 方法
-  _HT.on("connect", function(){
-    // 连接完成
-  });
-  _HT.camera("cameraContainer", "camerarPlayer", function(camera){
-    // 创建摄像头对象成功
-  });
-  _HT.mainPlayer("playerContainer", "mainPlayer", function(player){
-  //   // 创建课件对象成功;
-  });
   import { Loading } from 'vant'
   export default {
    components: {
      [Loading.name]: Loading
   },
+  mounted() {
+    var access_token = 1111;
+    // 创建SDK对象
+    var _HT = new MT.SDK.main(access_token);
+    // 监听 "connect" 方法
+    _HT.on("connect", function(){
+      // 连接完成
+    });
+    _HT.camera("cameraContainer", "camerarPlayer", function(camera){
+      // 创建摄像头对象成功
+    });
+    _HT.mainPlayer("playerContainer", "mainPlayer", function(player){
+    //   // 创建课件对象成功;
+    });
+    this.getRequest();
+  },
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
+    }
+  },
+  methods: {
+    getRequest() {
+      this.$http.get('/ip', res => {
+        console.log(res)
+      })
     }
   }
 }
