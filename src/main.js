@@ -4,14 +4,15 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import animate from 'animate.css'
-import axios from 'axios'
+
 // import Validate from '../build/validate'
-import Http from './js/api.js'
+import Http from './js/http'
 import 'vant/lib/index.css'
-Vue.prototype.$http = Http
+// Vue.prototype.$http = Http
 // import Vant from 'vant'
 
-Vue.use(axios)
+
+Vue.use(Http)
 Vue.config.productionTip = false
 Vue.use(animate)
 // Vue.use(Vant)

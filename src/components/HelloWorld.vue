@@ -18,6 +18,7 @@
 </template>
 <script>
   import { Loading } from 'vant'
+
   export default {
    components: {
      [Loading.name]: Loading
@@ -48,7 +49,7 @@
       this.$http.get('/ip', res => {
         console.log(res)
       })
-      this.request('BannerDestory', {
+      this.request('IdentifyCode', {
         id: this.removeItem.id
       }).then(res => {
         if (res.success) {
