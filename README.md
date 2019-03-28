@@ -16,6 +16,7 @@
 |   |-- components                   // vue所有组件
 |   |-- assets                       // 照片信息放静态资源
 |   |-- router                       // vue的路由管理
+|   |-- js                           // 封装请求跟api
 |   |-- App.vue                      // 页面入口文件
 |   |-- main.js                      // 程序入口文件，加载各种公共组件
 |-- static                           // 静态文件，比如一些图片，json数据等

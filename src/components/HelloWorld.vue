@@ -24,7 +24,7 @@
      [Loading.name]: Loading
   },
   mounted() {
-    var access_token = 1111;
+    var access_token = 'lJmYjVjZwYDOlJTN5UjNzIDZkhjZ0IzY4kDOhJDOjZDf8xXfigDO2YDNy8lMxgzN5cjI6ISZtFmbyJCLwojIhJCLwojIkl2ZiwCO4YjN0IjOiQWafV2cyV3bjJCLiIiOiIXY0FmdhJCLwojIyVGZuV2ZiwyMxEDM3UjM1UTM6ISZylGc4VmIsMTM1gDN1ITN1EjOiUWbpR3ZlJnIs01W6Iic0RXYiwiI0NXZ1dmI6ISZs9mciwCN0gDO2MjM2ojIklGeiwiIyADM2QTOyEmY1UHX4MTZ2UHXiojIl1WYut2Yp5mIsAjOiQWaiJCLikDNzkzMzIjM5FmcyFkI6ICZpVnIsITM4cTO3ojIklWbv9mciwyN0EjMxojIklGciwyN0EjMxojIkl2XyVmb0JXYwJye';
     // 创建SDK对象
     var _HT = new MT.SDK.main(access_token);
     // 监听 "connect" 方法

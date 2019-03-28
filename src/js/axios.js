@@ -49,7 +49,7 @@ AxiosInst.interceptors.response.use(response => {
       name: 'login'
     });
   }
-  // 重置token
+  // 重置token  根
   if (code === 1003) {
     let userInfo = window.localStorage.getItem('userInfo');
     userInfo = userInfo ? JSON.parse(userInfo) : '';
