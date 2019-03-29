@@ -4,11 +4,9 @@
  */
 
 const methodMap = {
-
+  // 用户管理
   IdentifyCode: {url: '/manage/user/getCode', method: 'post'},
   // 用户登陆
-  UserLogin: {url: '/public/user/login', method: 'get'},
-  // 用户注册
-
+  UserLogin: {url: '/api/auth/Login', method: 'post'},
 };
 export default methodMap;

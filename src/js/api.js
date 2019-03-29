@@ -7,7 +7,7 @@ import Qs from 'qs'
 // const source = CancelToken.source()
 
 const config = {
-  baseURL: process.env.NODE_ENV === 'development' ? 'http://192.168.0.1:8888/' : '',
+  baseURL: process.env.NODE_ENV === 'development' ? 'https://core.facc.net.cn' : '',
   timeout: 200000,
   withCredentials: true,
   headers: {
@@ -33,7 +33,7 @@ AxiosInst.interceptors.request.use(config => {
   if (utils.local.get('token')) {
     config.headers['token'] = `${window.localStorage.getItem('token')}`
   }
-
+  // 判断是否是login页面
   if (config.url.indexOf('login') < 0) {
     let lessTime = Number(utils.local.get('expireTime')) - Date.now() // 后台返回的过期时间与现在的进行计算
     if (lessTime <= 0) {

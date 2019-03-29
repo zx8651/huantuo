@@ -2,7 +2,7 @@
  * 网络请求插件 引入了toast 加载提示
  */
 import methodMap from './methodMap';
-import AxiosInst from './axios';
+import AxiosInst from './api';
 class Http {}
 Http.install = function (Vue) {
   /**
@@ -12,14 +12,14 @@ Http.install = function (Vue) {
    * @param toast 是否提示
    * @returns {string}
    */
-  Vue.prototype.request = function (method, opts, toast) {
+  Vue.prototype.request = function (url, opts, toast) {
     //如果有给 toast 参数则显示 loading 加载数据
     if (toast && typeof (toast) === 'boolean') {
       Vue.prototype.$loading('加载中...');
     } else if (toast && typeof (toast) === 'string') {
       Vue.prototype.$loading(toast);
     }
-    let m = methodMap[method];
+    let m = methodMap[url];
     if (m) {
       let optsType = typeof (opts);
       if (optsType === null || optsType !== 'object') {

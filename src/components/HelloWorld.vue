@@ -18,7 +18,6 @@
 </template>
 <script>
   import { Loading } from 'vant'
-
   export default {
    components: {
      [Loading.name]: Loading
@@ -46,14 +45,15 @@
   },
   methods: {
     getRequest() {
-      this.$http.get('/ip', res => {
-        console.log(res)
-      })
-      this.request('IdentifyCode', {
-        id: this.removeItem.id
+      this.request('UserLogin', {
+        'Code':1,
+        'PassWord':1,
+        'SiteId':1,
+        'IsWeiXin':1,
+        'SissionId':1
       }).then(res => {
         if (res.success) {
-         // 成功
+          // 成功
         }
       }).catch(e => {
         console.log(e);
