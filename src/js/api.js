@@ -84,9 +84,6 @@ const formatReq = function (method, url, data, json) {
       data
     })
       .then(r => {
-
-
-
         //统一处理
         // store.commit('UPDATE_LOADING', false); //隐藏loading
         // 这里可以添加指定对应状态码的处理方式,比如登陆过期,res.data.code === '6666' 路由跳转到login

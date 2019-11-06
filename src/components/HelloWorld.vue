@@ -23,20 +23,7 @@
      [Loading.name]: Loading
   },
   mounted() {
-    var access_token = 'lJmYjVjZwYDOlJTN5UjNzIDZkhjZ0IzY4kDOhJDOjZDf8xXfigDO2YDNy8lMxgzN5cjI6ISZtFmbyJCLwojIhJCLwojIkl2ZiwCO4YjN0IjOiQWafV2cyV3bjJCLiIiOiIXY0FmdhJCLwojIyVGZuV2ZiwyMxEDM3UjM1UTM6ISZylGc4VmIsMTM1gDN1ITN1EjOiUWbpR3ZlJnIs01W6Iic0RXYiwiI0NXZ1dmI6ISZs9mciwCN0gDO2MjM2ojIklGeiwiIyADM2QTOyEmY1UHX4MTZ2UHXiojIl1WYut2Yp5mIsAjOiQWaiJCLikDNzkzMzIjM5FmcyFkI6ICZpVnIsITM4cTO3ojIklWbv9mciwyN0EjMxojIklGciwyN0EjMxojIkl2XyVmb0JXYwJye';
-    // 创建SDK对象
-    var _HT = new MT.SDK.main(access_token);
-    // 监听 "connect" 方法
-    _HT.on("connect", function(){
-      // 连接完成
-    });
-    _HT.camera("cameraContainer", "camerarPlayer", function(camera){
-      // 创建摄像头对象成功
-    });
-    _HT.mainPlayer("playerContainer", "mainPlayer", function(player){
-    //   // 创建课件对象成功;
-    });
-    this.getRequest();
+    var access_token = 'lJmYjVjZwYDOlJTN5UjNzIDZkhjZ0IzY4kDOhJDOjZDf8xXfigDO2YDNy8lMxgzN5cjI6ISZtFmbyJCLwojIhJCLwojIkl2ZiwCO4YjN0IjOiQWafV2cyV
   },
   data () {
     return {
